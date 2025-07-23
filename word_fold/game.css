@@ -1,17 +1,17 @@
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(231, 39, 135);
+    color: rgb(196, 23, 80);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-h1{
+h1 {
     margin: 10px;
     padding: 20px;
 }
 
-#cell-holder{
+#cell-holder {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -20,18 +20,110 @@ h1{
     gap: 2px;
 }
 
-.cell{
+.cell {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: xx-large;
-    border: 2px, solid, rgba(255, 69, 45, 0.438);
-    border-radius: 8px;
+    border: rgb(255, 241, 119), 6px, outset;
+    border-radius: 10px;
     background: rgb(255, 241, 119);
     overflow-wrap: anywhere;
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.cell.selected{
-    border:rgb(0, 162, 255), 4px, solid;
+.cell.selected {
+    background: #ff1e5652;
+    border: #ff1e569c, 6px, outset;
+
+}
+
+#restart_button {
+    display: block;    
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    background-color: #ff1e56;
+    border: 2px solid rgb(196, 23, 80);
+    border-radius: 8px;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#restart_button:hover {
+    color: #e0005a;
+    background-color: #ff1e5698;
+}
+
+#buttonBoard{
+    align-items: center;
+    display: flex;
+    gap: 2px;
+}
+
+#fruitButton {
+    float: right;
+    width: 30%;
+    align-items: center;
+
+
+    color: #ffffff;
+    background-color: #ff701e;
+    border: 2px solid #ff1e56;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+#fruitButton:hover {
+    color: #e0005a;
+    background-color: #ff9e67;
+}
+
+#colorButton {
+    float: left;
+    align-items: center;
+    width: 30%;
+
+    color: #ffffff;
+    background-color: #ff701e;
+    border: 2px solid #ff1e56;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+#colorButton:hover {
+    color: #e0005a;
+    background-color: #ff9e67;
+}
+
+#animalButton {
+    width: 30%;
+    align-items: center;
+
+
+    color: #ffffff;
+    background-color: #ff701e;
+    border: 2px solid #ff1e56;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+#animalButton:hover {
+    color: #e0005a;
+    background-color: #ff9e67;
+}
+
+.gotWord{
+    text-decoration: line-through;
 }

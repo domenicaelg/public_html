@@ -11,8 +11,12 @@
   <div class="header">
     <h1>Word Fold!</h1>
   </div>
+  <div>
+    <h3 id="pointCount">Points: 0</h3>
+  </div>
+
   <div id="cell-holder">
-    <div class="cell" onclick="on_click(0,0)">a</div>
+    <div class="cell" onclick="on_click(0,0)"></div>
     <div class="cell" onclick="on_click(1,0)"></div>
     <div class="cell" onclick="on_click(2,0)"></div>
     <div class="cell" onclick="on_click(3,0)"></div>
@@ -39,6 +43,17 @@
     <div class="cell" onclick="on_click(4,4)"></div>
   </div>
   <div class="header" id="words"></div>
+  <p></p>
+  <div id="restart_button" onclick="Restart()">
+        Restart
+  </div>
+<p></p>
+<div id="buttonBoard">
+  <div id="colorButton" onclick="changeBoard(0)"> Board 1</div>
+  <div id="animalButton" onclick="changeBoard(1)"> Board 2</div>
+  <div id="fruitButton" onclick="changeBoard(2)"> Board 3</div>
+</div>
+
 </body>
 
 </html>
