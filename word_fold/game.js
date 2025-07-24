@@ -172,6 +172,7 @@ function Restart() {
     gotWord = [false, false, false, false, false]
 
     resetStrike()
+    setWords()
 }
 
 function setWords() {
@@ -191,12 +192,14 @@ function resetStrike() {
     document.getElementById("word5").style.textDecoration = 'none'
 }
 
-
 // Runs every frame
 
 function onframe() {
 
-
+    if(points>=250){
+        document.getElementById("bg").style.backgroundImage = 'url("../assets/fireworks.gif")'
+        console.log("you did it !!")
+    }
 
     requestAnimationFrame(onframe)
 }
