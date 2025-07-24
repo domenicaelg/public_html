@@ -1,5 +1,5 @@
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(196, 23, 80);
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@ h1 {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     aspect-ratio: 1/1;
-    width: 50%;
+    width: 30%;
     gap: 2px;
 }
 
@@ -24,12 +24,12 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: xx-large;
+    font-size: 40px;
     border: rgb(255, 241, 119), 6px, outset;
     border-radius: 10px;
     background: rgb(255, 241, 119);
     overflow-wrap: anywhere;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .cell.selected {
@@ -38,15 +38,20 @@ h1 {
 
 }
 
+#words {
+    font-size: larger;
+    font-weight: bolder;
+}
+
 #restart_button {
     display: block;    
     align-items: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #ffffff;
     background-color: #ff1e56;
-    border: 2px solid rgb(196, 23, 80);
+    border: 3px outset rgb(196, 23, 80);
     border-radius: 8px;
     padding: 10px;
+    font-size: xx-large;
     width: 100px;
     text-align: center;
     text-decoration: none;
@@ -63,37 +68,16 @@ h1 {
     gap: 2px;
 }
 
-#fruitButton {
-    float: right;
-    width: 30%;
-    align-items: center;
-
-
-    color: #ffffff;
-    background-color: #ff701e;
-    border: 2px solid #ff1e56;
-    border-radius: 8px;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-}
-
-#fruitButton:hover {
-    color: #e0005a;
-    background-color: #ff9e67;
-}
-
 #colorButton {
     float: left;
     align-items: center;
     width: 30%;
-
     color: #ffffff;
     background-color: #ff701e;
-    border: 2px solid #ff1e56;
+    border: 3px outset #ff1e56;
     border-radius: 8px;
     padding: 10px;
+    font-size: larger;
     text-align: center;
     text-decoration: none;
     display: block;
@@ -107,13 +91,12 @@ h1 {
 #animalButton {
     width: 30%;
     align-items: center;
-
-
     color: #ffffff;
     background-color: #ff701e;
-    border: 2px solid #ff1e56;
+    border: 3px outset #ff1e56;
     border-radius: 8px;
     padding: 10px;
+    font-size: larger;
     text-align: center;
     text-decoration: none;
     display: block;
@@ -124,6 +107,28 @@ h1 {
     background-color: #ff9e67;
 }
 
-.gotWord{
+
+
+#fruitButton {
+    float: right;
+    width: 30%;
+    align-items: center;
+    color: #ffffff;
+    background-color: #ff701e;
+    border: 3px outset #ff1e56;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: larger;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+#fruitButton:hover {
+    color: #e0005a;
+    background-color: #ff9e67;
+}
+
+.correctWord{
     text-decoration: line-through;
 }
