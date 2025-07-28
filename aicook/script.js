@@ -44,9 +44,9 @@ class AICookApp {
         }
     }
 
-    updateApiKeyStatus(valid) {
+    updateApiKeyStatus(isValid) {
         const btn = this.saveApiKeyBtn;
-        if (isvalid) {
+        if (isValid) {
             btn.textContent = 'Saved ✔️';
             btn.style.background = '#28a745';
         } else {
@@ -73,7 +73,7 @@ class AICookApp {
         }
 
         const ingredients = this.ingredientsInput.value.trim();
-        if (!this.ingedients) {
+        if (!ingredients) {
             this.showError('Please enter some ingredients.')
             return;
         }
@@ -115,19 +115,76 @@ class AICookApp {
     - instructions (numbered steps)
     - tips (optional)
         
-    Make sure the recipe is practical and delicious!`
+    Make sure the recipe is practical and delicious!`;
+    const URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${this.apiKey}`;
+    const response = await fetch(URL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            contents: [{
+                parts: [{
+                    text: prompt
+                }]
+            }],
+            generationConfig: {
+                temperature: 0.7,
+                topK: 40,
+                topP: 0.95,
+                maxOutputTokens: 2048,
+            }
+        })
+    });
+    if(!response.ok) {
+        const errorData = await response.json();
+        throw new Error(`API Error: ${errorData.error?.message || 'Unknown error'}`);
+    }
 
+    const data = await response.json();
+    return data.candidates[0].content.parts[0].text;
+}
+
+    displayRecipe(recipe) {
+        let formatRecipe = this.formatedRecipe(recipe)
+        this.recipeContent.innerHTML = formatRecipe;
+        this.showRecipe();
+    }
+
+    formatedRecipe(recipe) {
+        recipe = recipe.replace(/(^| ) +/gm, "$1")
+        recipe = recipe.replace(/^- */gm, "")
+        recipe = recipe.replace(/\*\*(.+?)\*\*/gm, "<strong>$1</strong>")
+        recipe = recipe.replace(/^(.+)/g, "<h3 class='recipe-title'>$1</h3>")
+        recipe = recipe.replace(/^\*/gm, "★")
+        recipe = recipe.replace(/^(.+)/gm, "<p>$1</p>")
+
+        return recipe;
     }
 
     showError(message){
-
+        alert(message);
     }
 
     showLoading(isLoading){
-
+        if(isLoading) {
+            this.loading.classList.add('show');
+            this. generateBtn.disabled = true;
+            this.generateBtn.textContent = 'Generating...';
+        } else {
+            this.loading.classList.remove('show');
+            this.generateBtn.disabled = false;
+            this.generateBtn.textContent = 'Generate Recipe';
+        }
     }
-    hideRecipe() {
 
+    showRecipe() {
+        this.recipeSection.classList.add('show');
+        this.recipeSection.scrollIntoView ({behavior: 'smooth'});
+    }
+
+    hideRecipe() {
+        this.recipeSection.classList.remove('show');
     }
 }
 

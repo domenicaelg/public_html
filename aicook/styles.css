@@ -12,7 +12,7 @@
 /* Main body styles - sets up the overall page appearance */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, readable font stack */
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Beautiful gradient background */
+    background: linear-gradient(135deg, #f84960 0%, #ffc850 100%); /* Beautiful gradient background */
     min-height: 100vh; /* Ensures full viewport height coverage */
     color: #333; /* Dark gray text for good readability */
 }
@@ -102,7 +102,7 @@ input[type="password"]:focus,
 textarea:focus,
 select:focus {
     outline: none; /* Removes default browser outline */
-    border-color: #667eea; /* Changes border to accent color when focused */
+    border-color: #f84960; /* Changes border to accent color when focused */
 }
 
 /* =============================================
@@ -124,7 +124,7 @@ select:focus {
 /* API key save button - distinct styling for important action */
 .api-key-section button {
     padding: 12px 20px; /* Comfortable click target */
-    background: #28a745; /* Green color indicates success/save action */
+    background: #39d88e; /* Green color indicates success/save action */
     color: white; /* White text for contrast */
     border: none; /* Removes default button border */
     border-radius: 10px; /* Rounded corners matching input fields */
@@ -135,7 +135,7 @@ select:focus {
 
 /* Hover state for API key button - darker green for feedback */
 .api-key-section button:hover {
-    background: #218838; /* Darker green on hover */
+    background: #39d88e; /* Darker green on hover */
 }
 
 /* =============================================
@@ -153,7 +153,7 @@ textarea {
 .generate-btn {
     width: 100%; /* Full width for prominence */
     padding: 15px; /* Large padding for easy clicking */
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradient matching page theme */
+    background: linear-gradient(135deg, #f84960 0%, #ffc850 100%); /* Gradient matching page theme */
     color: white; /* White text for contrast */
     border: none; /* Removes default border */
     border-radius: 10px; /* Rounded corners */
@@ -202,7 +202,7 @@ textarea {
     width: 50px; /* Fixed size for consistency */
     height: 50px;
     border: 5px solid #f3f3f3; /* Light gray border for base */
-    border-top: 5px solid #667eea; /* Colored top border creates spinning effect */
+    border-top: 5px solid #f84960; /* Colored top border creates spinning effect */
     border-radius: 50%; /* Makes it circular */
     animation: spin 1s linear infinite; /* Continuous spinning animation */
     margin: 0 auto 20px; /* Centers spinner and adds bottom margin */
@@ -233,7 +233,7 @@ textarea {
 
 /* Recipe section header */
 .recipe-section h2 {
-    color: #667eea; /* Accent color for section title */
+    color: #f84960; /* Accent color for section title */
     margin-bottom: 20px; /* Space between title and content */
     font-size: 2rem; /* Large, prominent heading */
 }
@@ -283,7 +283,7 @@ textarea {
 
 /* Recipe title styling - generated recipe name */
 .recipe-title {
-    color: #667eea; /* Accent color for recipe name */
+    color: #f84960; /* Accent color for recipe name */
     font-size: 1.8rem; /* Large, prominent title */
     margin-bottom: 15px; /* Space before recipe details */
     text-align: center; /* Centers the recipe title */
@@ -308,7 +308,7 @@ textarea {
 /* Metadata labels (Prep Time, Cook Time, etc.) */
 .recipe-meta strong {
     display: block; /* Makes label appear on its own line */
-    color: #667eea; /* Accent color for labels */
+    color: #f84960; /* Accent color for labels */
     font-size: 1.1rem; /* Slightly larger than normal text */
 }
 
