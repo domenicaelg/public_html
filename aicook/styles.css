@@ -37,34 +37,30 @@ header {
 
 /* Main app title styling */
 header h1 {
-    font-size: 3rem; /* Large, prominent title */
-    margin-bottom: 10px; /* Space between title and subtitle */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Subtle shadow for depth */
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 /* Subtitle/description styling */
 header p {
-    font-size: 1.2rem; /* Slightly larger than normal text */
-    opacity: 0.9; /* Slightly transparent for hierarchy */
+    font-size: 1.2rem;
+    opacity: 0.9;
 }
 
 /* =============================================
    MAIN CONTENT CARD
    ============================================= */
-
-/* Main content area - white card that contains all interactive elements */
 main {
-    background: white; /* Clean white background for contrast */
-    border-radius: 20px; /* Rounded corners for modern look */
-    padding: 40px; /* Generous padding for comfortable content spacing */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Subtle shadow for depth and elevation */
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
 /* =============================================
    FORM SECTIONS AND INPUTS
    ============================================= */
-
-/* Input section container - groups all form inputs */
 .input-section {
     margin-bottom: 30px; /* Space between input section and other content */
 }
@@ -77,7 +73,7 @@ main {
     margin-bottom: 25px; /* Consistent vertical spacing between form sections */
 }
 
-/* Form labels - consistent styling for all input labels */
+/* Form labels */
 label {
     display: block; /* Makes labels take full width and stack vertically */
     margin-bottom: 8px; /* Space between label and input */
