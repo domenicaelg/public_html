@@ -197,7 +197,7 @@ function resetStrike() {
 function onframe() {
 
     if(points>=250){
-        document.getElementById("bg").style.backgroundImage = 'url("../assets/fireworks.gif")'
+        document.getElementById("bg").style.backgroundImage = 'url("../assets/nyan.gif")'
         console.log("you did it !!")
     }
 
