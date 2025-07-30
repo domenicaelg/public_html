@@ -34,11 +34,6 @@ function getLanguageSelect() {
     return languageSelect;
 }
 
-function getInitialStoryContent() {
-    return storyDiv ? storyDiv.textContent.trim() :
-        "Narrator: Help me build a story1 Start with a sentence and I will continue it.";
-}
-
 function speakText(text, lang) {
  try {
     const utterance = new SpeechSynthesisUtterance(text);
@@ -89,6 +84,5 @@ export default {
     getLanguageSelect,
     speakText,
     stopSpeaking,
-    pauseOrResumeSpeaking,
-    getInitialStoryContent
+    pauseOrResumeSpeaking
 }

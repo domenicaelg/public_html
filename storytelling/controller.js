@@ -21,11 +21,18 @@ async function handleVoiceInput(event) {
 }
 
 function handleLanguageChange() {
+    View.stopSpeaking();
     const selectOption = View.getLanguageSelect().selectedOptions[0];
     const newLang = selectOption.value;
     const newLangName = selectOption.dataset.name;
     Model.setLanguage(newLang, newLangName);
     recognition.lang = newLang;
+
+    const welcomeMessage = Model.getWelcomeMessage(newLang);
+    const newInitialStory = `Narrator: ${welcomeMessage}`;
+    Model.initializeStory(newInitialStory);
+    View.updateStory(newInitialStory);
+    View.speakText(welcomeMessage, newLang);
 }
 
 function handleStopSpeaking() {
@@ -39,8 +46,9 @@ function handleStopSpeaking() {
     View.updateStory(resetStory);
 
     setTimeout(() => {
-    View.speakText("Story reset! Help me build a story! Start a sentence and I will continue it.", 
-        Model.getLanguage().lang)
+    const lang = Model.getLanguage().lang;
+    const welcomeMessage = Model.getWelcomeMessage(lang);
+    View.speakText(welcomeMessage, lang);
     }, 500);
 }
 
@@ -51,13 +59,14 @@ function handlePauseResume(e) {
 
 function init() {
     window.speechSynthesis.onvoiceschanged = () => {};
-    const initialStoryContent = View.getInitialStoryContent();
-    Model.initializeStory(initialStoryContent);
-    View.updateStory(Model.getStory());
+    const initialLang = Model.getLanguage().lang;
+    const welcomeMessage = Model.getWelcomeMessage(initialLang);
+    const initialStory = `Narrator: ${welcomeMessage}`;
+    Model.initializeStory(initialStory);
+    View.updateStory(initialStory);
 
     setTimeout(() => {
-        View.speakText("Story reset! Help me build a story! Start a sentence and I will continue it.", 
-            Model.getLanguage().lang)
+        View.speakText(welcomeMessage, initialLang);
     }, 500);
 
     View.getSpeakButton().onclick = () => {

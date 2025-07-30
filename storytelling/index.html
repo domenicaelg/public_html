@@ -13,22 +13,50 @@
 </head>
 
 <body>
-  <!-- Main heading of the application -->
-  <h1>🎤 AI Voice Story Builder</h1>
+  <!-- Main container for the entire application -->
+  <div class="container">
+    <!-- Header section with app title and description -->
+    <header>
+      <!-- Main heading of the application -->
+      <h1>🎤 AI Voice Story Builder</h1>
+    </header>
 
-  <!-- Language selection controls section -->
-  <div class="controls">
-    <!-- Label for the language dropdown -->
-    <label for="languageSelect">Choose Language: </label>
-    <!-- Dropdown menu for selecting different languages -->
-    <!-- Each option has a value (language code) and data-name (display name) -->
-    <select id="languageSelect">
+    <!-- Main content area containing all interactive elements -->
+    <main>
+      <!-- Language selection controls section -->
+      <div class="controls">
+        <!-- Label for the language dropdown -->
+        <label for="languageSelect">Choose Language: </label>
+        <!-- Dropdown menu for selecting different languages; Each option has a value (language code) and data-name (display name) -->
+      <select id="languageSelect">
       <option value="en-US" data-name="English">English</option>
-      <option value="fr-FR" data-name="French">French</option>
-      <option value="vi-VN" data-name="Vietnamese">Vietnamese</option>
-      <option value="es-ES" data-name="Spanish">Spanish</option>
+      <option value="ar-SA" data-name="Arabic">Arabic</option>
+      <option value="bg-BG" data-name="Bulgarian">Bulgarian</option>
       <option value="zh-CN" data-name="Chinese">Chinese</option>
+      <option value="hr-HR" data-name="Croatian">Croatian</option>
+      <option value="cs-CZ" data-name="Czech">Czech</option>
+      <option value="nl-NL" data-name="Dutch">Dutch</option>
+      <option value="fr-FR" data-name="French">French</option>
+      <option value="de-DE" data-name="German">German</option>
+      <option value="el-GR" data-name="Greek">Greek</option>
+      <option value="hi-IN" data-name="Hindi">Hindi</option>
+      <option value="id-ID" data-name="Indonesian">Indonesian</option>
       <option value="it-IT" data-name="Italian">Italian</option>
+      <option value="ja-JP" data-name="Japanese">Japanese</option>
+      <option value="ko-KR" data-name="Korean">Korean</option> 
+      <option value="ms-MY" data-name="Malay">Malay</option>
+      <option value="nb-NO" data-name="Norwegian Bokmål">Norwegian Bokmål</option>
+      <option value="fa-IR" data-name="Persian">Persian</option>
+      <option value="pl-PL" data-name="Polish">Polish</option>
+      <option value="pt-BR" data-name="Portuguese">Portuguese</option> 
+      <option value="ro-RO" data-name="Romanian">Romanian</option> 
+      <option value="ru-RU" data-name="Russian">Russian</option>
+      <option value="es-ES" data-name="Spanish">Spanish</option>
+      <option value="sv-SE" data-name="Swedish">Swedish</option>
+      <option value="th-TH" data-name="Thai">Thai</option>
+      <option value="tr-TR" data-name="Turkish">Turkish</option>
+      <option value="uk-UA" data-name="Ukrainian">Ukrainian</option>
+      <option value="vi-VN" data-name="Vietnamese">Vietnamese</option>
 
     </select>
   </div>
@@ -50,6 +78,8 @@
     <!-- Loading indicator shown while AI is generating story responses -->
     <div id="loading">AI is thinking...</div>
   </div>
+ </main> 
+</div>
 
 </body>
 
