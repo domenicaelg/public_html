@@ -5,6 +5,11 @@ const stopSpeakBtn = document.getElementById('stopSpeakBtn');
 const pauseSpeakBtn = document.getElementById('pauseSpeakBtn');
 const languageSelect = document.getElementById('languageSelect');
 const loadingDiv = document.getElementById('loading');
+const passwordInp = document.getElementById('password');
+
+function getKey() {
+    return passwordInp.value;
+}
 
 function updateStory(text) {
     if (story) {
@@ -84,5 +89,6 @@ export default {
     getLanguageSelect,
     speakText,
     stopSpeaking,
-    pauseOrResumeSpeaking
+    pauseOrResumeSpeaking,
+    getKey
 }
