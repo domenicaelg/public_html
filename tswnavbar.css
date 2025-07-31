@@ -20,16 +20,16 @@
 	padding: 0 ;
 	display: block ;
 	list-style: none ;
-	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #tswcssbuttons li a {
 	color: #ffffff ;
-	background-color: #e0005a ;
-	border: 1px outset #e0005a;
+	background-color: #FB8500 ;
+	border: 1px outset #FB8500;
 	text-decoration: none;
 	display: block;
 }
 #tswcssbuttons li a:hover {
-	color: #e0005a ;
-	background-color: #ffb1d0 ;
+	color: #023047 ;
+	background-color: #FFB703 ;
 }
